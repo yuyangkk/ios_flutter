@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -56,7 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        leading: IconButton.,
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){
+          print('返回到原生');
+          SystemNavigator.pop(animated: true);
+        }),
       ),
       body: Center(
         child: Column(

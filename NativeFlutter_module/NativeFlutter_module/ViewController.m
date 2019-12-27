@@ -27,7 +27,7 @@
     [flutterButton addTarget:self action:@selector(flutterButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:flutterButton];
     
-    UIButton *flutterButton2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 200, 40)];
+    UIButton *flutterButton2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 120, 40)];
     [flutterButton2 setTitle:@"隐式创建引擎" forState:UIControlStateNormal];
     [flutterButton2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [flutterButton2 addTarget:self action:@selector(createFlutterViewControllerWithImplicitFlutterEngine) forControlEvents:UIControlEventTouchUpInside];
@@ -45,7 +45,7 @@
     // 跳转
     [self.navigationController pushViewController:flutterVC animated:YES];
     // 当然你也可以使用下面的方法跳转
-    //[self presentViewController:flutterVC animated:YES completion:nil];
+//    [self presentViewController:flutterVC animated:YES completion:nil];
 }
 
 - (void)createFlutterViewControllerWithImplicitFlutterEngine {
@@ -53,6 +53,7 @@
     FlutterViewController *flutterVC = [[FlutterViewController alloc] initWithProject:nil nibName:nil bundle:nil];
     // 跳转
     [self.navigationController pushViewController:flutterVC animated:YES];
+//    [self presentViewController:flutterVC animated:YES completion:nil];
 }
 
 @end
