@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+flutter_application_path = '../kk_flutter' #这里是我们创建的flutter_module的路径
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+target 'NativeFlutter_module' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for NativeFlutter_module
+
+  install_all_flutter_pods(flutter_application_path)
+
+  target 'NativeFlutter_moduleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'NativeFlutter_moduleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
